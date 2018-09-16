@@ -8,8 +8,12 @@
 
 import UIKit
 import CoreData
+import RxSwift
 
 class ViewController: UIViewController {
+    
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,6 +22,12 @@ class ViewController: UIViewController {
         let contextExecutor = ContextExecutor(context: coreDataStackProvider.mainQueueContext)
         let repository = Repository<CarCoreData>(executor: contextExecutor)
         let _ = CarsStorage(repository: repository)
+        
+        let api = APIService()
+        
+        api.carsList().subscribe(onSuccess: {
+            print($0)
+        }).disposed(by: disposeBag)
     }
 }
 

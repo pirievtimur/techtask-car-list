@@ -19,14 +19,13 @@ extension CarCoreData: Persistable {
     }
 }
 
-
 extension CarCoreData {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CarCoreData> {
         return NSFetchRequest<CarCoreData>(entityName: "CarCoreData")
     }
 
-    @NSManaged public var id: String?
+    @NSManaged public var id: Int64
     @NSManaged public var type: String?
     @NSManaged public var model: String?
     @NSManaged public var color: String?

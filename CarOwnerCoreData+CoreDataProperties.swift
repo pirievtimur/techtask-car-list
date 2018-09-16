@@ -16,7 +16,7 @@ extension CarOwnerCoreData {
         return NSFetchRequest<CarOwnerCoreData>(entityName: "CarOwnerCoreData")
     }
 
-    @NSManaged public var id: String?
+    @NSManaged public var id: Int64
     @NSManaged public var name: String?
     @NSManaged public var phone: String?
     @NSManaged public var car: CarCoreData?

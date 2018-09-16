@@ -24,10 +24,13 @@
 		7169EB4C214E4B1F00413BEF /* ManagedObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB4B214E4B1F00413BEF /* ManagedObjectModel.swift */; };
 		7169EB4E214E4B3C00413BEF /* CoreDataStackProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB4D214E4B3C00413BEF /* CoreDataStackProvider.swift */; };
 		7169EB51214E55CA00413BEF /* CarsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB50214E55CA00413BEF /* CarsStorage.swift */; };
-		7169EB56214E56AF00413BEF /* CarOwnerCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB52214E56AF00413BEF /* CarOwnerCoreData+CoreDataClass.swift */; };
-		7169EB57214E56AF00413BEF /* CarOwnerCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB53214E56AF00413BEF /* CarOwnerCoreData+CoreDataProperties.swift */; };
-		7169EB58214E56AF00413BEF /* CarCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB54214E56AF00413BEF /* CarCoreData+CoreDataClass.swift */; };
-		7169EB59214E56AF00413BEF /* CarCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB55214E56AF00413BEF /* CarCoreData+CoreDataProperties.swift */; };
+		7169EB5B214E599B00413BEF /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB5A214E599B00413BEF /* CarModel.swift */; };
+		7169EB5E214E5AA400413BEF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB5D214E5AA400413BEF /* APIService.swift */; };
+		7169EB60214E609100413BEF /* CarOwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB5F214E609100413BEF /* CarOwnerModel.swift */; };
+		7169EB65214E612B00413BEF /* CarCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB61214E612B00413BEF /* CarCoreData+CoreDataProperties.swift */; };
+		7169EB66214E612B00413BEF /* CarCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB62214E612B00413BEF /* CarCoreData+CoreDataClass.swift */; };
+		7169EB67214E612B00413BEF /* CarOwnerCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB63214E612B00413BEF /* CarOwnerCoreData+CoreDataProperties.swift */; };
+		7169EB68214E612B00413BEF /* CarOwnerCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB64214E612B00413BEF /* CarOwnerCoreData+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,10 +53,13 @@
 		7169EB4B214E4B1F00413BEF /* ManagedObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectModel.swift; sourceTree = "<group>"; };
 		7169EB4D214E4B3C00413BEF /* CoreDataStackProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackProvider.swift; sourceTree = "<group>"; };
 		7169EB50214E55CA00413BEF /* CarsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsStorage.swift; sourceTree = "<group>"; };
-		7169EB52214E56AF00413BEF /* CarOwnerCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarOwnerCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7169EB53214E56AF00413BEF /* CarOwnerCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarOwnerCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		7169EB54214E56AF00413BEF /* CarCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7169EB55214E56AF00413BEF /* CarCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7169EB5A214E599B00413BEF /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		7169EB5D214E5AA400413BEF /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		7169EB5F214E609100413BEF /* CarOwnerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarOwnerModel.swift; sourceTree = "<group>"; };
+		7169EB61214E612B00413BEF /* CarCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		7169EB62214E612B00413BEF /* CarCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		7169EB63214E612B00413BEF /* CarOwnerCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarOwnerCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		7169EB64214E612B00413BEF /* CarOwnerCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarOwnerCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		71C673747E68116CBA5F4C2B /* Pods-car-list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-car-list.release.xcconfig"; path = "Pods/Target Support Files/Pods-car-list/Pods-car-list.release.xcconfig"; sourceTree = "<group>"; };
 		E6C5DB90ECEB7AC232D6FA51 /* Pods_car_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_car_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -122,6 +128,7 @@
 		7169EAED214E404C00413BEF /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				7169EB5C214E5A9A00413BEF /* Services */,
 				7169EB4F214E55AF00413BEF /* Storage */,
 				7169EAEF214E406B00413BEF /* Models */,
 				7169EAEE214E405D00413BEF /* CoreData */,
@@ -148,6 +155,8 @@
 		7169EAEF214E406B00413BEF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7169EB5A214E599B00413BEF /* CarModel.swift */,
+				7169EB5F214E609100413BEF /* CarOwnerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,10 +164,10 @@
 		7169EB3B214E46B500413BEF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7169EB52214E56AF00413BEF /* CarOwnerCoreData+CoreDataClass.swift */,
-				7169EB53214E56AF00413BEF /* CarOwnerCoreData+CoreDataProperties.swift */,
-				7169EB54214E56AF00413BEF /* CarCoreData+CoreDataClass.swift */,
-				7169EB55214E56AF00413BEF /* CarCoreData+CoreDataProperties.swift */,
+				7169EB62214E612B00413BEF /* CarCoreData+CoreDataClass.swift */,
+				7169EB61214E612B00413BEF /* CarCoreData+CoreDataProperties.swift */,
+				7169EB64214E612B00413BEF /* CarOwnerCoreData+CoreDataClass.swift */,
+				7169EB63214E612B00413BEF /* CarOwnerCoreData+CoreDataProperties.swift */,
 				711C1C35214E3CD1003FB8A5 /* car_list.xcdatamodeld */,
 			);
 			path = Models;
@@ -179,6 +188,14 @@
 				7169EB50214E55CA00413BEF /* CarsStorage.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		7169EB5C214E5A9A00413BEF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7169EB5D214E5AA400413BEF /* APIService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,20 +330,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7169EB59214E56AF00413BEF /* CarCoreData+CoreDataProperties.swift in Sources */,
+				7169EB65214E612B00413BEF /* CarCoreData+CoreDataProperties.swift in Sources */,
+				7169EB66214E612B00413BEF /* CarCoreData+CoreDataClass.swift in Sources */,
+				7169EB5E214E5AA400413BEF /* APIService.swift in Sources */,
+				7169EB68214E612B00413BEF /* CarOwnerCoreData+CoreDataClass.swift in Sources */,
+				7169EB67214E612B00413BEF /* CarOwnerCoreData+CoreDataProperties.swift in Sources */,
 				7169EB44214E497A00413BEF /* FetchedResultsControllerEntityObserver.swift in Sources */,
-				7169EB56214E56AF00413BEF /* CarOwnerCoreData+CoreDataClass.swift in Sources */,
 				7169EB40214E491500413BEF /* Persistable.swift in Sources */,
 				7169EB51214E55CA00413BEF /* CarsStorage.swift in Sources */,
 				7169EB3D214E46CA00413BEF /* NSManagedObjectContext+Rx.swift in Sources */,
 				7169EB42214E492D00413BEF /* DomainConvertibleType.swift in Sources */,
 				7169EB46214E49AD00413BEF /* ContextScheduler.swift in Sources */,
-				7169EB58214E56AF00413BEF /* CarCoreData+CoreDataClass.swift in Sources */,
 				711C1C31214E3CD1003FB8A5 /* ViewController.swift in Sources */,
 				7169EB4A214E4A6D00413BEF /* Repository.swift in Sources */,
-				7169EB57214E56AF00413BEF /* CarOwnerCoreData+CoreDataProperties.swift in Sources */,
 				711C1C37214E3CD1003FB8A5 /* car_list.xcdatamodeld in Sources */,
 				7169EB4E214E4B3C00413BEF /* CoreDataStackProvider.swift in Sources */,
+				7169EB5B214E599B00413BEF /* CarModel.swift in Sources */,
+				7169EB60214E609100413BEF /* CarOwnerModel.swift in Sources */,
 				7169EB4C214E4B1F00413BEF /* ManagedObjectModel.swift in Sources */,
 				7169EB48214E4A5500413BEF /* ContextExecutor.swift in Sources */,
 				711C1C2F214E3CD1003FB8A5 /* AppDelegate.swift in Sources */,
