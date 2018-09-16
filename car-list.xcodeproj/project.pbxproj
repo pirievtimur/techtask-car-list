@@ -35,6 +35,8 @@
 		719F9268214EDD89008F9754 /* CarCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F9264214EDD89008F9754 /* CarCoreData+CoreDataClass.swift */; };
 		719F9269214EDD89008F9754 /* CarOwnerCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F9265214EDD89008F9754 /* CarOwnerCoreData+CoreDataProperties.swift */; };
 		719F926A214EDD89008F9754 /* CarCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F9266214EDD89008F9754 /* CarCoreData+CoreDataProperties.swift */; };
+		719F9273214EE459008F9754 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F9271214EE458008F9754 /* CarCell.swift */; };
+		719F9274214EE459008F9754 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 719F9272214EE459008F9754 /* CarCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		719F9264214EDD89008F9754 /* CarCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CarCoreData+CoreDataClass.swift"; path = "/Users/timurpiriev/Developer/techtask-car-list/car-list/Domain/CoreData/Models/CarCoreData+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		719F9265214EDD89008F9754 /* CarOwnerCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CarOwnerCoreData+CoreDataProperties.swift"; path = "/Users/timurpiriev/Developer/techtask-car-list/car-list/Domain/CoreData/Models/CarOwnerCoreData+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		719F9266214EDD89008F9754 /* CarCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CarCoreData+CoreDataProperties.swift"; path = "/Users/timurpiriev/Developer/techtask-car-list/car-list/Domain/CoreData/Models/CarCoreData+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		719F9271214EE458008F9754 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
+		719F9272214EE459008F9754 /* CarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarCell.xib; sourceTree = "<group>"; };
 		71C673747E68116CBA5F4C2B /* Pods-car-list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-car-list.release.xcconfig"; path = "Pods/Target Support Files/Pods-car-list/Pods-car-list.release.xcconfig"; sourceTree = "<group>"; };
 		E6C5DB90ECEB7AC232D6FA51 /* Pods_car_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_car_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -122,6 +126,7 @@
 		711C1C2D214E3CD1003FB8A5 /* car-list */ = {
 			isa = PBXGroup;
 			children = (
+				719F926B214EE2CF008F9754 /* UI */,
 				7169EAED214E404C00413BEF /* Domain */,
 				711C1C2E214E3CD1003FB8A5 /* AppDelegate.swift */,
 				711C1C30214E3CD1003FB8A5 /* ViewController.swift */,
@@ -210,6 +215,23 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		719F926B214EE2CF008F9754 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				719F926E214EE2E4008F9754 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		719F926E214EE2E4008F9754 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				719F9271214EE458008F9754 /* CarCell.swift */,
+				719F9272214EE459008F9754 /* CarCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,6 +295,7 @@
 			files = (
 				711C1C3C214E3CD2003FB8A5 /* LaunchScreen.storyboard in Resources */,
 				711C1C39214E3CD2003FB8A5 /* Assets.xcassets in Resources */,
+				719F9274214EE459008F9754 /* CarCell.xib in Resources */,
 				711C1C34214E3CD1003FB8A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +385,7 @@
 				7169EB4E214E4B3C00413BEF /* CoreDataStackProvider.swift in Sources */,
 				7169EB5B214E599B00413BEF /* CarModel.swift in Sources */,
 				7169EB6E214ED9A200413BEF /* CarOwnerCoreData+Extensions.swift in Sources */,
+				719F9273214EE459008F9754 /* CarCell.swift in Sources */,
 				7169EB6A214E6B8A00413BEF /* NSManagedObjectContext+Ext.swift in Sources */,
 				719F926A214EDD89008F9754 /* CarCoreData+CoreDataProperties.swift in Sources */,
 				7169EB60214E609100413BEF /* CarOwnerModel.swift in Sources */,

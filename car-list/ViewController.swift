@@ -40,6 +40,14 @@ class ViewController: UIViewController {
     
     func setupSubviews() {
         navigationItem.rightBarButtonItem = refreshButton
+        
+        tableView.register(UINib(nibName: "CarCell", bundle: nil), forCellReuseIdentifier: CarCell.identifier)
+        
+        tableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
+            guard let cell = self?.tableView.cellForRow(at: indexPath) as? CarCell else { return }
+            cell.expand()
+        })
+        .disposed(by: disposeBag)
     }
     
     func bindInput() {
@@ -55,8 +63,11 @@ class ViewController: UIViewController {
         
         output
             .cars
-            .drive(tableView.rx.items(cellIdentifier: "Cell")) { (_, carModel, cell) in
-                cell.textLabel?.text = carModel.model
+            .drive(tableView.rx.items(cellIdentifier: CarCell.identifier)) { (_, carModel, cell) in
+                if let carCell = cell as? CarCell {
+                    carCell.updateWithModel(model: carModel)
+                    carCell.delegate = self
+                }
             }.disposed(by: disposeBag)
         
         output
@@ -67,9 +78,17 @@ class ViewController: UIViewController {
         
         output
             .executingStatus
-            .map { !$0 }
-            .drive(refreshButton.rx.isEnabled)
+            .drive(onNext: { [weak self] executing in
+                self?.navigationItem.rightBarButtonItem = executing ? nil : self?.refreshButton
+            })
             .disposed(by: disposeBag)
+    }
+}
+
+extension ViewController: ExpandableCellDelegate {
+    func updateCell(_ cell: UITableViewCell) {
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
 }
 
