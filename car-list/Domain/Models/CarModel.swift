@@ -39,7 +39,7 @@ extension CarModel: CoreDataRepresentable {
     }
     
     init(carCoreData: CarCoreData) {
-        let owners = carCoreData.owners?.compactMap { ($0 as? CarOwnerCoreData)?.asDomain() }
+        let owners = carCoreData.owner?.compactMap { ($0 as? CarOwnerCoreData)?.asDomain() }
         
         self.init(id: Int(carCoreData.id),
                   type: carCoreData.type ?? "",

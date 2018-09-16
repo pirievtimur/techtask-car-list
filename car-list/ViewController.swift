@@ -13,11 +13,12 @@ import RxCocoa
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    private let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: nil, action: nil)
+    
     private let disposeBag = DisposeBag()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    private lazy var viewModel: ViewModel = {
         let managedObjectModel = NSManagedObjectModel(with: "car_list", bundle: Bundle.main)!
         let coreDataStackProvider = CoreDataStackProvider(storeName: "CarsStore", objectModel: managedObjectModel)
         let contextExecutor = ContextExecutor(context: coreDataStackProvider.mainQueueContext)
@@ -26,17 +27,48 @@ class ViewController: UIViewController {
         let storage = CarsStorage(repository: repository)
         let api = APIService()
         
-        api
-            .carsList()
-            .flatMap { storage.createCars($0) }
-            .publish()
-            .connect()
+        return ViewModel(carsListAPI: api, carsStorage: storage)
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupSubviews()
+        bindInput()
+        bindOutput()
+    }
+    
+    func setupSubviews() {
+        navigationItem.rightBarButtonItem = refreshButton
+    }
+    
+    func bindInput() {
+        let refresh = refreshButton.rx.tap.asDriver()
+        
+        let input = ViewModel.Input(refreshAction: refresh)
+        
+        viewModel.bind(input: input)
+    }
+    
+    func bindOutput() {
+        let output = viewModel.output()
+        
+        output
+            .cars
+            .drive(tableView.rx.items(cellIdentifier: "Cell")) { (_, carModel, cell) in
+                cell.textLabel?.text = carModel.model
+            }.disposed(by: disposeBag)
+        
+        output
+            .cars
+            .map { String($0.count) }
+            .drive(navigationItem.rx.title)
             .disposed(by: disposeBag)
         
-        storage.cars()
-            .map { String($0.count) }
-            .asDriver(onErrorJustReturn: "")
-            .drive(navigationItem.rx.title)
+        output
+            .executingStatus
+            .map { !$0 }
+            .drive(refreshButton.rx.isEnabled)
             .disposed(by: disposeBag)
     }
 }

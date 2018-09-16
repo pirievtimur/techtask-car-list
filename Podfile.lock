@@ -1,19 +1,22 @@
 PODS:
+  - AppSpectorSDK (1.0.2)
   - ObjectMapper (3.3.0)
   - RxCocoa (4.2.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.2.0)
 
 DEPENDENCIES:
+  - AppSpectorSDK
   - ObjectMapper (~> 3.3)
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
 
 SPEC CHECKSUMS:
+  AppSpectorSDK: b56b77e8b5ce7b8915a991befc7a7a09c899c162
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
 
-PODFILE CHECKSUM: 95d4085b37e99cd52145c42d416420d694d60f42
+PODFILE CHECKSUM: 57fdd8940d14ab7a881dfcd82c9ede70224e3741
 
 COCOAPODS: 1.4.0

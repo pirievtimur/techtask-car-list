@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import AppSpectorSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let config = AppSpectorConfig(apiKey: "ZWU3MWE3YjktMjU4Mi00NmFkLWI5YzEtNDAzZDA2MDQ2YmJm", monitorIDs: [Monitor.coredata])
+        AppSpector.run(with: config)
+        
         return true
     }
 

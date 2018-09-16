@@ -10,7 +10,6 @@ enum CarsStorageError: Error {
     case fetchRequestFailed
 }
 
-
 class CarsStorage: CarsStorageProtocol {
     private let repository: Repository<CarCoreData>
     
@@ -19,7 +18,11 @@ class CarsStorage: CarsStorageProtocol {
     }
     
     func cars() -> Observable<[CarModel]> {
-        return repository.observe().map { $0.map { $0.asDomain() } }
+        return repository.observe().map {
+            $0.map {
+                $0.asDomain()
+            }
+        }
     }
     
     func createCars(_ cars: [CarModel]) -> Observable<[CarModel]> {
@@ -37,6 +40,8 @@ class CarsStorage: CarsStorageProtocol {
                     carOwnerEntity.id = Int64($0.id)
                     carOwnerEntity.name = $0.name
                     carOwnerEntity.phone = $0.phone
+                    
+                    carEntity.addToOwner(carOwnerEntity)
                 }
                 
                 return carEntity
