@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     private let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: nil, action: nil)
+    private let clearButton = UIBarButtonItem(title: "Clear", style: .plain, target: nil, action: nil)
     
     private let disposeBag = DisposeBag()
     
@@ -40,6 +41,7 @@ class ViewController: UIViewController {
     
     func setupSubviews() {
         navigationItem.rightBarButtonItem = refreshButton
+        navigationItem.leftBarButtonItem = clearButton
         
         tableView.register(UINib(nibName: "CarCell", bundle: nil), forCellReuseIdentifier: CarCell.identifier)
         
@@ -52,8 +54,10 @@ class ViewController: UIViewController {
     
     func bindInput() {
         let refresh = refreshButton.rx.tap.asDriver()
+        let clear = clearButton.rx.tap.asDriver()
         
-        let input = ViewModel.Input(refreshAction: refresh)
+        let input = ViewModel.Input(refreshAction: refresh,
+                                    clearAction: clear)
         
         viewModel.bind(input: input)
     }
@@ -72,15 +76,8 @@ class ViewController: UIViewController {
         
         output
             .cars
-            .map { String($0.count) }
+            .map { $0.count == 0 ? "No cars" : "\($0.count) car(s)" }
             .drive(navigationItem.rx.title)
-            .disposed(by: disposeBag)
-        
-        output
-            .executingStatus
-            .drive(onNext: { [weak self] executing in
-                self?.navigationItem.rightBarButtonItem = executing ? nil : self?.refreshButton
-            })
             .disposed(by: disposeBag)
     }
 }

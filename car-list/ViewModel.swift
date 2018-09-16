@@ -5,15 +5,15 @@ class ViewModel {
     
     struct Input {
         var refreshAction: Driver<Void>
+        var clearAction: Driver<Void>
     }
     
     struct Output {
         var cars: Driver<[CarModel]>
-        var executingStatus: Driver<Bool>
     }
     
     private let disposeBag = DisposeBag()
-    private let executingStatus = BehaviorSubject<Bool>(value: false)
+    private let executingStatus = PublishSubject<Void>()
     
     private let carsListAPI: CarsListAPI
     private let carsStorage: CarsStorageProtocol
@@ -28,19 +28,19 @@ class ViewModel {
             .asObservable()
             .flatMap { [weak self] _ in self?.carsListAPI.carsList() ?? .empty() }
             .flatMap { [weak self] in self?.carsStorage.createCars($0) ?? .empty() }
-            .subscribe(onNext: { [weak self] _ in self?.setExecutionStatus(flag: true) },
-                       onError: { [weak self] _ in self?.setExecutionStatus(flag: false) },
-                       onCompleted: { [weak self] in self?.setExecutionStatus(flag: false) },
-                       onDisposed: nil)
+            .publish()
+            .connect()
+            .disposed(by: disposeBag)
+        
+        input.clearAction
+            .asObservable()
+            .flatMap { [weak self] _ in self?.carsStorage.deleteAllCars() ?? .empty() }
+            .publish()
+            .connect()
             .disposed(by: disposeBag)
     }
-    
-    private func setExecutionStatus(flag: Bool) {
-        executingStatus.onNext(flag)
-    }
-    
+
     func output() -> Output {
-        return .init(cars: carsStorage.cars().asDriver(onErrorJustReturn: []),
-                     executingStatus: executingStatus.asDriver(onErrorJustReturn: false))
+        return .init(cars: carsStorage.cars().asDriver(onErrorJustReturn: []))
     }
 }

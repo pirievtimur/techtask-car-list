@@ -3,6 +3,7 @@ import RxSwift
 protocol CarsStorageProtocol {
     func cars() -> Observable<[CarModel]>
     func createCars(_ cars: [CarModel]) -> Completable
+    func deleteAllCars() -> Completable
 }
 
 enum CarsStorageError: Error {
@@ -23,6 +24,17 @@ class CarsStorage: CarsStorageProtocol {
                 $0.asDomain()
             }
         }
+    }
+    
+    func deleteAllCars() -> Completable {
+        return repository.perform(transaction: { context -> Void in
+            let entities: [CarCoreData] = try context.fetchAll()
+            
+            entities.forEach { context.delete($0) }
+            
+            try context.save()
+        })
+        .asCompletable()
     }
     
     func createCars(_ cars: [CarModel]) -> Completable {
