@@ -31,6 +31,7 @@
 		7169EB66214E612B00413BEF /* CarCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB62214E612B00413BEF /* CarCoreData+CoreDataClass.swift */; };
 		7169EB67214E612B00413BEF /* CarOwnerCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB63214E612B00413BEF /* CarOwnerCoreData+CoreDataProperties.swift */; };
 		7169EB68214E612B00413BEF /* CarOwnerCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB64214E612B00413BEF /* CarOwnerCoreData+CoreDataClass.swift */; };
+		7169EB6A214E6B8A00413BEF /* NSManagedObjectContext+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB69214E6B8A00413BEF /* NSManagedObjectContext+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		7169EB62214E612B00413BEF /* CarCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		7169EB63214E612B00413BEF /* CarOwnerCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarOwnerCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		7169EB64214E612B00413BEF /* CarOwnerCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarOwnerCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		7169EB69214E6B8A00413BEF /* NSManagedObjectContext+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Ext.swift"; sourceTree = "<group>"; };
 		71C673747E68116CBA5F4C2B /* Pods-car-list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-car-list.release.xcconfig"; path = "Pods/Target Support Files/Pods-car-list/Pods-car-list.release.xcconfig"; sourceTree = "<group>"; };
 		E6C5DB90ECEB7AC232D6FA51 /* Pods_car_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_car_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -142,6 +144,7 @@
 				7169EB3E214E490B00413BEF /* Convertion */,
 				7169EB3B214E46B500413BEF /* Models */,
 				7169EB3C214E46CA00413BEF /* NSManagedObjectContext+Rx.swift */,
+				7169EB69214E6B8A00413BEF /* NSManagedObjectContext+Ext.swift */,
 				7169EB43214E497A00413BEF /* FetchedResultsControllerEntityObserver.swift */,
 				7169EB45214E49AD00413BEF /* ContextScheduler.swift */,
 				7169EB47214E4A5500413BEF /* ContextExecutor.swift */,
@@ -346,6 +349,7 @@
 				711C1C37214E3CD1003FB8A5 /* car_list.xcdatamodeld in Sources */,
 				7169EB4E214E4B3C00413BEF /* CoreDataStackProvider.swift in Sources */,
 				7169EB5B214E599B00413BEF /* CarModel.swift in Sources */,
+				7169EB6A214E6B8A00413BEF /* NSManagedObjectContext+Ext.swift in Sources */,
 				7169EB60214E609100413BEF /* CarOwnerModel.swift in Sources */,
 				7169EB4C214E4B1F00413BEF /* ManagedObjectModel.swift in Sources */,
 				7169EB48214E4A5500413BEF /* ContextExecutor.swift in Sources */,

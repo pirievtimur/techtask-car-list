@@ -2,13 +2,13 @@ import RxSwift
 import ObjectMapper
 
 protocol CarsListAPI {
-    func carsList() -> Single<[CarModel]>
+    func carsList() -> Observable<[CarModel]>
 }
 
 class APIService {}
 
 extension APIService: CarsListAPI {
-    func carsList() -> Single<[CarModel]> {
+    func carsList() -> Observable<[CarModel]> {
         return Observable.create { observer -> Disposable in
             DispatchQueue.global().async { [weak self] in
                 guard let weakSelf = self else { return }
@@ -23,7 +23,6 @@ extension APIService: CarsListAPI {
             return Disposables.create()
         }
         .subscribeOn(MainScheduler.instance)
-        .asSingle()
     }
     
     private func generateData() -> [CarModel] {

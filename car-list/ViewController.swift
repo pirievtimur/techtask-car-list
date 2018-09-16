@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
     
@@ -21,13 +22,22 @@ class ViewController: UIViewController {
         let coreDataStackProvider = CoreDataStackProvider(storeName: "CarsStore", objectModel: managedObjectModel)
         let contextExecutor = ContextExecutor(context: coreDataStackProvider.mainQueueContext)
         let repository = Repository<CarCoreData>(executor: contextExecutor)
-        let _ = CarsStorage(repository: repository)
         
+        let storage = CarsStorage(repository: repository)
         let api = APIService()
         
-        api.carsList().subscribe(onSuccess: {
-            print($0)
-        }).disposed(by: disposeBag)
+        api
+            .carsList()
+            .flatMap { storage.createCars($0) }
+            .publish()
+            .connect()
+            .disposed(by: disposeBag)
+        
+        storage.cars()
+            .map { String($0.count) }
+            .asDriver(onErrorJustReturn: "")
+            .drive(navigationItem.rx.title)
+            .disposed(by: disposeBag)
     }
 }
 
