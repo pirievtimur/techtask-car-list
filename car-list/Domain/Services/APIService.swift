@@ -10,11 +10,14 @@ class APIService {}
 extension APIService: CarsListAPI {
     func carsList() -> Observable<[CarModel]> {
         return Observable.create { observer -> Disposable in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
             DispatchQueue.global().async { [weak self] in
+                sleep(3)
                 guard let weakSelf = self else { return }
                 let results = weakSelf.generateData()
                 
                 DispatchQueue.main.async {
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
                     observer.onNext(results)
                     observer.onCompleted()
                 }

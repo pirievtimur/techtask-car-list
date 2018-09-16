@@ -2,7 +2,7 @@ import RxSwift
 
 protocol CarsStorageProtocol {
     func cars() -> Observable<[CarModel]>
-    func createCars(_ cars: [CarModel]) -> Observable<[CarModel]>
+    func createCars(_ cars: [CarModel]) -> Completable
 }
 
 enum CarsStorageError: Error {
@@ -25,7 +25,7 @@ class CarsStorage: CarsStorageProtocol {
         }
     }
     
-    func createCars(_ cars: [CarModel]) -> Observable<[CarModel]> {
+    func createCars(_ cars: [CarModel]) -> Completable {
         return repository.perform(transaction: { context -> [CarCoreData] in
             let carsToStore: [CarCoreData] = cars.map {
                 let carEntity: CarCoreData = context.create()
@@ -51,7 +51,6 @@ class CarsStorage: CarsStorageProtocol {
             
             return carsToStore
         })
-        .asObservable()
-        .map { $0.map { $0.asDomain() } }
+        .asCompletable()
     }
 }

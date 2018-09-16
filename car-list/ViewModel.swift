@@ -28,10 +28,10 @@ class ViewModel {
             .asObservable()
             .flatMap { [weak self] _ in self?.carsListAPI.carsList() ?? .empty() }
             .flatMap { [weak self] in self?.carsStorage.createCars($0) ?? .empty() }
-            .asDriver(onErrorJustReturn: [])
-            .do(onNext: { [weak self] _ in self?.setExecutionStatus(flag: true) },
-                onCompleted: { [weak self] in self?.setExecutionStatus(flag: false) })
-            .drive()
+            .subscribe(onNext: { [weak self] _ in self?.setExecutionStatus(flag: true) },
+                       onError: { [weak self] _ in self?.setExecutionStatus(flag: false) },
+                       onCompleted: { [weak self] in self?.setExecutionStatus(flag: false) },
+                       onDisposed: nil)
             .disposed(by: disposeBag)
     }
     
