@@ -14,10 +14,6 @@
 		711C1C37214E3CD1003FB8A5 /* car_list.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 711C1C35214E3CD1003FB8A5 /* car_list.xcdatamodeld */; };
 		711C1C39214E3CD2003FB8A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 711C1C38214E3CD2003FB8A5 /* Assets.xcassets */; };
 		711C1C3C214E3CD2003FB8A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711C1C3A214E3CD2003FB8A5 /* LaunchScreen.storyboard */; };
-		7169EB28214E44F000413BEF /* Car+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB24214E44F000413BEF /* Car+CoreDataProperties.swift */; };
-		7169EB29214E44F000413BEF /* Car+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB25214E44F000413BEF /* Car+CoreDataClass.swift */; };
-		7169EB2A214E44F000413BEF /* CarOwner+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB26214E44F000413BEF /* CarOwner+CoreDataProperties.swift */; };
-		7169EB2B214E44F000413BEF /* CarOwner+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB27214E44F000413BEF /* CarOwner+CoreDataClass.swift */; };
 		7169EB3D214E46CA00413BEF /* NSManagedObjectContext+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB3C214E46CA00413BEF /* NSManagedObjectContext+Rx.swift */; };
 		7169EB40214E491500413BEF /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB3F214E491500413BEF /* Persistable.swift */; };
 		7169EB42214E492D00413BEF /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB41214E492D00413BEF /* DomainConvertibleType.swift */; };
@@ -27,6 +23,11 @@
 		7169EB4A214E4A6D00413BEF /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB49214E4A6D00413BEF /* Repository.swift */; };
 		7169EB4C214E4B1F00413BEF /* ManagedObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB4B214E4B1F00413BEF /* ManagedObjectModel.swift */; };
 		7169EB4E214E4B3C00413BEF /* CoreDataStackProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB4D214E4B3C00413BEF /* CoreDataStackProvider.swift */; };
+		7169EB51214E55CA00413BEF /* CarsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB50214E55CA00413BEF /* CarsStorage.swift */; };
+		7169EB56214E56AF00413BEF /* CarOwnerCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB52214E56AF00413BEF /* CarOwnerCoreData+CoreDataClass.swift */; };
+		7169EB57214E56AF00413BEF /* CarOwnerCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB53214E56AF00413BEF /* CarOwnerCoreData+CoreDataProperties.swift */; };
+		7169EB58214E56AF00413BEF /* CarCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB54214E56AF00413BEF /* CarCoreData+CoreDataClass.swift */; };
+		7169EB59214E56AF00413BEF /* CarCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB55214E56AF00413BEF /* CarCoreData+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,10 +40,6 @@
 		711C1C38214E3CD2003FB8A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		711C1C3B214E3CD2003FB8A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		711C1C3D214E3CD2003FB8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7169EB24214E44F000413BEF /* Car+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		7169EB25214E44F000413BEF /* Car+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7169EB26214E44F000413BEF /* CarOwner+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarOwner+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		7169EB27214E44F000413BEF /* CarOwner+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarOwner+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7169EB3C214E46CA00413BEF /* NSManagedObjectContext+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Rx.swift"; sourceTree = "<group>"; };
 		7169EB3F214E491500413BEF /* Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
 		7169EB41214E492D00413BEF /* DomainConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
@@ -52,6 +49,11 @@
 		7169EB49214E4A6D00413BEF /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		7169EB4B214E4B1F00413BEF /* ManagedObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectModel.swift; sourceTree = "<group>"; };
 		7169EB4D214E4B3C00413BEF /* CoreDataStackProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackProvider.swift; sourceTree = "<group>"; };
+		7169EB50214E55CA00413BEF /* CarsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsStorage.swift; sourceTree = "<group>"; };
+		7169EB52214E56AF00413BEF /* CarOwnerCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarOwnerCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7169EB53214E56AF00413BEF /* CarOwnerCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarOwnerCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7169EB54214E56AF00413BEF /* CarCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7169EB55214E56AF00413BEF /* CarCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		71C673747E68116CBA5F4C2B /* Pods-car-list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-car-list.release.xcconfig"; path = "Pods/Target Support Files/Pods-car-list/Pods-car-list.release.xcconfig"; sourceTree = "<group>"; };
 		E6C5DB90ECEB7AC232D6FA51 /* Pods_car_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_car_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 		7169EAED214E404C00413BEF /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				7169EB4F214E55AF00413BEF /* Storage */,
 				7169EAEF214E406B00413BEF /* Models */,
 				7169EAEE214E405D00413BEF /* CoreData */,
 			);
@@ -152,10 +155,10 @@
 		7169EB3B214E46B500413BEF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7169EB25214E44F000413BEF /* Car+CoreDataClass.swift */,
-				7169EB24214E44F000413BEF /* Car+CoreDataProperties.swift */,
-				7169EB27214E44F000413BEF /* CarOwner+CoreDataClass.swift */,
-				7169EB26214E44F000413BEF /* CarOwner+CoreDataProperties.swift */,
+				7169EB52214E56AF00413BEF /* CarOwnerCoreData+CoreDataClass.swift */,
+				7169EB53214E56AF00413BEF /* CarOwnerCoreData+CoreDataProperties.swift */,
+				7169EB54214E56AF00413BEF /* CarCoreData+CoreDataClass.swift */,
+				7169EB55214E56AF00413BEF /* CarCoreData+CoreDataProperties.swift */,
 				711C1C35214E3CD1003FB8A5 /* car_list.xcdatamodeld */,
 			);
 			path = Models;
@@ -168,6 +171,14 @@
 				7169EB41214E492D00413BEF /* DomainConvertibleType.swift */,
 			);
 			path = Convertion;
+			sourceTree = "<group>";
+		};
+		7169EB4F214E55AF00413BEF /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				7169EB50214E55CA00413BEF /* CarsStorage.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,21 +313,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7169EB59214E56AF00413BEF /* CarCoreData+CoreDataProperties.swift in Sources */,
 				7169EB44214E497A00413BEF /* FetchedResultsControllerEntityObserver.swift in Sources */,
+				7169EB56214E56AF00413BEF /* CarOwnerCoreData+CoreDataClass.swift in Sources */,
 				7169EB40214E491500413BEF /* Persistable.swift in Sources */,
-				7169EB28214E44F000413BEF /* Car+CoreDataProperties.swift in Sources */,
+				7169EB51214E55CA00413BEF /* CarsStorage.swift in Sources */,
 				7169EB3D214E46CA00413BEF /* NSManagedObjectContext+Rx.swift in Sources */,
 				7169EB42214E492D00413BEF /* DomainConvertibleType.swift in Sources */,
 				7169EB46214E49AD00413BEF /* ContextScheduler.swift in Sources */,
+				7169EB58214E56AF00413BEF /* CarCoreData+CoreDataClass.swift in Sources */,
 				711C1C31214E3CD1003FB8A5 /* ViewController.swift in Sources */,
 				7169EB4A214E4A6D00413BEF /* Repository.swift in Sources */,
-				7169EB2B214E44F000413BEF /* CarOwner+CoreDataClass.swift in Sources */,
+				7169EB57214E56AF00413BEF /* CarOwnerCoreData+CoreDataProperties.swift in Sources */,
 				711C1C37214E3CD1003FB8A5 /* car_list.xcdatamodeld in Sources */,
 				7169EB4E214E4B3C00413BEF /* CoreDataStackProvider.swift in Sources */,
 				7169EB4C214E4B1F00413BEF /* ManagedObjectModel.swift in Sources */,
-				7169EB29214E44F000413BEF /* Car+CoreDataClass.swift in Sources */,
 				7169EB48214E4A5500413BEF /* ContextExecutor.swift in Sources */,
-				7169EB2A214E44F000413BEF /* CarOwner+CoreDataProperties.swift in Sources */,
 				711C1C2F214E3CD1003FB8A5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

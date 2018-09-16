@@ -12,6 +12,12 @@ import CoreData
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let managedObjectModel = NSManagedObjectModel(with: "car_list", bundle: Bundle.main)!
+        let coreDataStackProvider = CoreDataStackProvider(storeName: "CarsStore", objectModel: managedObjectModel)
+        let contextExecutor = ContextExecutor(context: coreDataStackProvider.mainQueueContext)
+        let repository = Repository<CarCoreData>(executor: contextExecutor)
+        let _ = CarsStorage(repository: repository)
     }
 }
 

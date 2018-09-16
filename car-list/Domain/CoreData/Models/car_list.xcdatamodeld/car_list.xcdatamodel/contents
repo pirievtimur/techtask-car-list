@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Car" representedClassName="Car" syncable="YES">
+    <entity name="CarCoreData" representedClassName="CarCoreData" syncable="YES">
         <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="model" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="owners" toMany="YES" deletionRule="Cascade" destinationEntity="CarOwner" inverseName="car" inverseEntity="CarOwner" syncable="YES"/>
+        <relationship name="owners" toMany="YES" deletionRule="Cascade" destinationEntity="CarOwnerCoreData" inverseName="car" inverseEntity="CarOwnerCoreData" syncable="YES"/>
     </entity>
-    <entity name="CarOwner" representedClassName="CarOwner" syncable="YES">
+    <entity name="CarOwnerCoreData" representedClassName="CarOwnerCoreData" syncable="YES">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="car" maxCount="1" deletionRule="Nullify" destinationEntity="Car" inverseName="owners" inverseEntity="Car" syncable="YES"/>
+        <relationship name="car" maxCount="1" deletionRule="Nullify" destinationEntity="CarCoreData" inverseName="owners" inverseEntity="CarCoreData" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Car" positionX="-8757" positionY="-7443" width="128" height="118"/>
-        <element name="CarOwner" positionX="-8559" positionY="-7443" width="110" height="103"/>
+        <element name="CarCoreData" positionX="-8757" positionY="-7443" width="128" height="118"/>
+        <element name="CarOwnerCoreData" positionX="-8559" positionY="-7443" width="110" height="103"/>
     </elements>
 </model>

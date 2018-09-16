@@ -1,5 +1,5 @@
 //
-//  Car+CoreDataProperties.swift
+//  CarCoreData+CoreDataProperties.swift
 //  
 //
 //  Created by Timur Piriev on 9/16/18.
@@ -9,11 +9,21 @@
 import Foundation
 import CoreData
 
+extension CarCoreData: Persistable {
+    static var entityName: String {
+        return "CarCoreData"
+    }
+    
+    static var identifierName: String {
+        return "CarCoreData"
+    }
+}
 
-extension Car {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Car> {
-        return NSFetchRequest<Car>(entityName: "Car")
+extension CarCoreData {
+
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<CarCoreData> {
+        return NSFetchRequest<CarCoreData>(entityName: "CarCoreData")
     }
 
     @NSManaged public var id: String?
@@ -25,13 +35,13 @@ extension Car {
 }
 
 // MARK: Generated accessors for owners
-extension Car {
+extension CarCoreData {
 
     @objc(addOwnersObject:)
-    @NSManaged public func addToOwners(_ value: CarOwner)
+    @NSManaged public func addToOwners(_ value: CarOwnerCoreData)
 
     @objc(removeOwnersObject:)
-    @NSManaged public func removeFromOwners(_ value: CarOwner)
+    @NSManaged public func removeFromOwners(_ value: CarOwnerCoreData)
 
     @objc(addOwners:)
     @NSManaged public func addToOwners(_ values: NSSet)
