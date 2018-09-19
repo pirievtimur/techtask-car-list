@@ -38,6 +38,9 @@
 		719F9274214EE459008F9754 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 719F9272214EE459008F9754 /* CarCell.xib */; };
 		71E3007A21524D2900B0DB0D /* car_list_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E3007921524D2900B0DB0D /* car_list_tests.swift */; };
 		71E3008421524E4300B0DB0D /* CarModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E3008321524E4300B0DB0D /* CarModelTests.swift */; };
+		71E300872152559100B0DB0D /* CarsStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E300862152559100B0DB0D /* CarsStorageTests.swift */; };
+		71E3008A2152569D00B0DB0D /* ImmediateContextExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E300892152569D00B0DB0D /* ImmediateContextExecutor.swift */; };
+		71E3008C2152575200B0DB0D /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E3008B2152575200B0DB0D /* NSManagedObjectContext+Extensions.swift */; };
 		E638A87E31553B6B85DB2DED /* Pods_car_list_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B0DECB7967522F1432563B /* Pods_car_list_tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +92,9 @@
 		71E3007921524D2900B0DB0D /* car_list_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = car_list_tests.swift; sourceTree = "<group>"; };
 		71E3007B21524D2900B0DB0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71E3008321524E4300B0DB0D /* CarModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelTests.swift; sourceTree = "<group>"; };
+		71E300862152559100B0DB0D /* CarsStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsStorageTests.swift; sourceTree = "<group>"; };
+		71E300892152569D00B0DB0D /* ImmediateContextExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmediateContextExecutor.swift; sourceTree = "<group>"; };
+		71E3008B2152575200B0DB0D /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
 		D6B3759A481F0BC59255CB5C /* Pods-car-list-tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-car-list-tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-car-list-tests/Pods-car-list-tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E6C5DB90ECEB7AC232D6FA51 /* Pods_car_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_car_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9A71148664492B6C0CB63C /* Pods-car-list-tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-car-list-tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-car-list-tests/Pods-car-list-tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -265,6 +271,7 @@
 		71E3007821524D2900B0DB0D /* car-list-tests */ = {
 			isa = PBXGroup;
 			children = (
+				71E300882152568200B0DB0D /* Utils */,
 				71E3008121524DF900B0DB0D /* Domain */,
 				71E3007921524D2900B0DB0D /* car_list_tests.swift */,
 				71E3007B21524D2900B0DB0D /* Info.plist */,
@@ -275,6 +282,7 @@
 		71E3008121524DF900B0DB0D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				71E300852152540E00B0DB0D /* Storage */,
 				71E3008221524E0200B0DB0D /* Models */,
 			);
 			path = Domain;
@@ -286,6 +294,23 @@
 				71E3008321524E4300B0DB0D /* CarModelTests.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		71E300852152540E00B0DB0D /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				71E300862152559100B0DB0D /* CarsStorageTests.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		71E300882152568200B0DB0D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				71E300892152569D00B0DB0D /* ImmediateContextExecutor.swift */,
+				71E3008B2152575200B0DB0D /* NSManagedObjectContext+Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -546,8 +571,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71E3008A2152569D00B0DB0D /* ImmediateContextExecutor.swift in Sources */,
+				71E300872152559100B0DB0D /* CarsStorageTests.swift in Sources */,
 				71E3008421524E4300B0DB0D /* CarModelTests.swift in Sources */,
 				71E3007A21524D2900B0DB0D /* car_list_tests.swift in Sources */,
+				71E3008C2152575200B0DB0D /* NSManagedObjectContext+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
