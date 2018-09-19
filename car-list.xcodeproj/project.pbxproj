@@ -18,7 +18,6 @@
 		7169EB40214E491500413BEF /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB3F214E491500413BEF /* Persistable.swift */; };
 		7169EB42214E492D00413BEF /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB41214E492D00413BEF /* DomainConvertibleType.swift */; };
 		7169EB44214E497A00413BEF /* FetchedResultsControllerEntityObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB43214E497A00413BEF /* FetchedResultsControllerEntityObserver.swift */; };
-		7169EB46214E49AD00413BEF /* ContextScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB45214E49AD00413BEF /* ContextScheduler.swift */; };
 		7169EB48214E4A5500413BEF /* ContextExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB47214E4A5500413BEF /* ContextExecutor.swift */; };
 		7169EB4A214E4A6D00413BEF /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB49214E4A6D00413BEF /* Repository.swift */; };
 		7169EB4C214E4B1F00413BEF /* ManagedObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169EB4B214E4B1F00413BEF /* ManagedObjectModel.swift */; };
@@ -37,10 +36,24 @@
 		719F926A214EDD89008F9754 /* CarCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F9266214EDD89008F9754 /* CarCoreData+CoreDataProperties.swift */; };
 		719F9273214EE459008F9754 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F9271214EE458008F9754 /* CarCell.swift */; };
 		719F9274214EE459008F9754 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 719F9272214EE459008F9754 /* CarCell.xib */; };
+		71E3007A21524D2900B0DB0D /* car_list_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E3007921524D2900B0DB0D /* car_list_tests.swift */; };
+		71E3008421524E4300B0DB0D /* CarModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E3008321524E4300B0DB0D /* CarModelTests.swift */; };
+		E638A87E31553B6B85DB2DED /* Pods_car_list_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B0DECB7967522F1432563B /* Pods_car_list_tests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71E3007C21524D2900B0DB0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 711C1C23214E3CD1003FB8A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 711C1C2A214E3CD1003FB8A5;
+			remoteInfo = "car-list";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1AE59CADAB92CD96DAB3D48D /* Pods-car-list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-car-list.debug.xcconfig"; path = "Pods/Target Support Files/Pods-car-list/Pods-car-list.debug.xcconfig"; sourceTree = "<group>"; };
+		50B0DECB7967522F1432563B /* Pods_car_list_tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_car_list_tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		711C1C2B214E3CD1003FB8A5 /* car-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "car-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		711C1C2E214E3CD1003FB8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		711C1C30214E3CD1003FB8A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +66,6 @@
 		7169EB3F214E491500413BEF /* Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
 		7169EB41214E492D00413BEF /* DomainConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
 		7169EB43214E497A00413BEF /* FetchedResultsControllerEntityObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedResultsControllerEntityObserver.swift; sourceTree = "<group>"; };
-		7169EB45214E49AD00413BEF /* ContextScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextScheduler.swift; sourceTree = "<group>"; };
 		7169EB47214E4A5500413BEF /* ContextExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextExecutor.swift; sourceTree = "<group>"; };
 		7169EB49214E4A6D00413BEF /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		7169EB4B214E4B1F00413BEF /* ManagedObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectModel.swift; sourceTree = "<group>"; };
@@ -73,7 +85,13 @@
 		719F9271214EE458008F9754 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 		719F9272214EE459008F9754 /* CarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarCell.xib; sourceTree = "<group>"; };
 		71C673747E68116CBA5F4C2B /* Pods-car-list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-car-list.release.xcconfig"; path = "Pods/Target Support Files/Pods-car-list/Pods-car-list.release.xcconfig"; sourceTree = "<group>"; };
+		71E3007721524D2900B0DB0D /* car-list-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "car-list-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71E3007921524D2900B0DB0D /* car_list_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = car_list_tests.swift; sourceTree = "<group>"; };
+		71E3007B21524D2900B0DB0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71E3008321524E4300B0DB0D /* CarModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelTests.swift; sourceTree = "<group>"; };
+		D6B3759A481F0BC59255CB5C /* Pods-car-list-tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-car-list-tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-car-list-tests/Pods-car-list-tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E6C5DB90ECEB7AC232D6FA51 /* Pods_car_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_car_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE9A71148664492B6C0CB63C /* Pods-car-list-tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-car-list-tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-car-list-tests/Pods-car-list-tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +103,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		71E3007421524D2900B0DB0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E638A87E31553B6B85DB2DED /* Pods_car_list_tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -93,6 +119,8 @@
 			children = (
 				1AE59CADAB92CD96DAB3D48D /* Pods-car-list.debug.xcconfig */,
 				71C673747E68116CBA5F4C2B /* Pods-car-list.release.xcconfig */,
+				D6B3759A481F0BC59255CB5C /* Pods-car-list-tests.debug.xcconfig */,
+				FE9A71148664492B6C0CB63C /* Pods-car-list-tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -101,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				E6C5DB90ECEB7AC232D6FA51 /* Pods_car_list.framework */,
+				50B0DECB7967522F1432563B /* Pods_car_list_tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				711C1C2D214E3CD1003FB8A5 /* car-list */,
+				71E3007821524D2900B0DB0D /* car-list-tests */,
 				711C1C2C214E3CD1003FB8A5 /* Products */,
 				03022449E4813DFCEBFB5272 /* Pods */,
 				4EF26ABDDD9335A4D7D183C8 /* Frameworks */,
@@ -119,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				711C1C2B214E3CD1003FB8A5 /* car-list.app */,
+				71E3007721524D2900B0DB0D /* car-list-tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,7 +189,6 @@
 				7169EB3C214E46CA00413BEF /* NSManagedObjectContext+Rx.swift */,
 				7169EB69214E6B8A00413BEF /* NSManagedObjectContext+Ext.swift */,
 				7169EB43214E497A00413BEF /* FetchedResultsControllerEntityObserver.swift */,
-				7169EB45214E49AD00413BEF /* ContextScheduler.swift */,
 				7169EB47214E4A5500413BEF /* ContextExecutor.swift */,
 				7169EB4D214E4B3C00413BEF /* CoreDataStackProvider.swift */,
 				7169EB4B214E4B1F00413BEF /* ManagedObjectModel.swift */,
@@ -232,6 +262,32 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		71E3007821524D2900B0DB0D /* car-list-tests */ = {
+			isa = PBXGroup;
+			children = (
+				71E3008121524DF900B0DB0D /* Domain */,
+				71E3007921524D2900B0DB0D /* car_list_tests.swift */,
+				71E3007B21524D2900B0DB0D /* Info.plist */,
+			);
+			path = "car-list-tests";
+			sourceTree = "<group>";
+		};
+		71E3008121524DF900B0DB0D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				71E3008221524E0200B0DB0D /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		71E3008221524E0200B0DB0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				71E3008321524E4300B0DB0D /* CarModelTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,6 +311,27 @@
 			productReference = 711C1C2B214E3CD1003FB8A5 /* car-list.app */;
 			productType = "com.apple.product-type.application";
 		};
+		71E3007621524D2900B0DB0D /* car-list-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71E3007E21524D2900B0DB0D /* Build configuration list for PBXNativeTarget "car-list-tests" */;
+			buildPhases = (
+				103D029193D2CBE179C3AD65 /* [CP] Check Pods Manifest.lock */,
+				71E3007321524D2900B0DB0D /* Sources */,
+				71E3007421524D2900B0DB0D /* Frameworks */,
+				71E3007521524D2900B0DB0D /* Resources */,
+				A66FD69D6A3B3D9F4AF1D991 /* [CP] Embed Pods Frameworks */,
+				4A0E3E4A62CB6D974DACC599 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71E3007D21524D2900B0DB0D /* PBXTargetDependency */,
+			);
+			name = "car-list-tests";
+			productName = "car-list-tests";
+			productReference = 71E3007721524D2900B0DB0D /* car-list-tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -267,6 +344,10 @@
 				TargetAttributes = {
 					711C1C2A214E3CD1003FB8A5 = {
 						CreatedOnToolsVersion = 9.4;
+					};
+					71E3007621524D2900B0DB0D = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 711C1C2A214E3CD1003FB8A5;
 					};
 				};
 			};
@@ -284,6 +365,7 @@
 			projectRoot = "";
 			targets = (
 				711C1C2A214E3CD1003FB8A5 /* car-list */,
+				71E3007621524D2900B0DB0D /* car-list-tests */,
 			);
 		};
 /* End PBXProject section */
@@ -300,9 +382,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		71E3007521524D2900B0DB0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		103D029193D2CBE179C3AD65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-car-list-tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A0E3E4A62CB6D974DACC599 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-car-list-tests/Pods-car-list-tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6515E640F6CE5885A51CF3D3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -342,6 +464,32 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-car-list/Pods-car-list-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A66FD69D6A3B3D9F4AF1D991 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-car-list-tests/Pods-car-list-tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-car-list-tests/Pods-car-list-tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C6660C7387CBBAA9BDF88A05 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,7 +524,6 @@
 				7169EB51214E55CA00413BEF /* CarsStorage.swift in Sources */,
 				7169EB3D214E46CA00413BEF /* NSManagedObjectContext+Rx.swift in Sources */,
 				7169EB42214E492D00413BEF /* DomainConvertibleType.swift in Sources */,
-				7169EB46214E49AD00413BEF /* ContextScheduler.swift in Sources */,
 				711C1C31214E3CD1003FB8A5 /* ViewController.swift in Sources */,
 				7169EB4A214E4A6D00413BEF /* Repository.swift in Sources */,
 				719F9268214EDD89008F9754 /* CarCoreData+CoreDataClass.swift in Sources */,
@@ -395,7 +542,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		71E3007321524D2900B0DB0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71E3008421524E4300B0DB0D /* CarModelTests.swift in Sources */,
+				71E3007A21524D2900B0DB0D /* car_list_tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		71E3007D21524D2900B0DB0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 711C1C2A214E3CD1003FB8A5 /* car-list */;
+			targetProxy = 71E3007C21524D2900B0DB0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		711C1C32214E3CD1003FB8A5 /* Main.storyboard */ = {
@@ -537,6 +701,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C22TD2AZTE;
 				INFOPLIST_FILE = "car-list/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -555,6 +720,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C22TD2AZTE;
 				INFOPLIST_FILE = "car-list/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -564,6 +730,48 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		71E3007F21524D2900B0DB0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6B3759A481F0BC59255CB5C /* Pods-car-list-tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C22TD2AZTE;
+				INFOPLIST_FILE = "car-list-tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ptb.car-list-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/car-list.app/car-list";
+			};
+			name = Debug;
+		};
+		71E3008021524D2900B0DB0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE9A71148664492B6C0CB63C /* Pods-car-list-tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C22TD2AZTE;
+				INFOPLIST_FILE = "car-list-tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ptb.car-list-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/car-list.app/car-list";
 			};
 			name = Release;
 		};
@@ -584,6 +792,15 @@
 			buildConfigurations = (
 				711C1C41214E3CD2003FB8A5 /* Debug */,
 				711C1C42214E3CD2003FB8A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71E3007E21524D2900B0DB0D /* Build configuration list for PBXNativeTarget "car-list-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71E3007F21524D2900B0DB0D /* Debug */,
+				71E3008021524D2900B0DB0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
