@@ -8,7 +8,6 @@ import CoreData
 class CarsStorageTests: XCTestCase {
     
     var sut: CarsStorage!
-    var disposeBag: DisposeBag!
     let testScheduler = TestScheduler(initialClock: 0)
 
     override func setUp() {
